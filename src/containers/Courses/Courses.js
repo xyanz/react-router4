@@ -21,7 +21,7 @@ class Courses extends Component {
         const courses = this.state.courses.map( course => {
             return (
                 <Link to={{
-                    pathname: '/courses/' + course.id,
+                    pathname: this.props.match.url + "/" + course.id,
                     hash: course.title
                     }} 
                     key={course.id} >

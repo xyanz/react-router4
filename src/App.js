@@ -20,15 +20,15 @@ class App extends Component {
             <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
           </ol>
           <Switch>
-            <Route path="/courses/" component={Courses}/>
-            <Route path="/users" exact component={Users}/>
+            <Route path="/courses" component={Courses}/>
+            <Route path="/users" component={Users}/>
             <Route path="/" exact component={Courses}/>
-            <Redirect from="/all-courses" to ="courses" />
+            <Redirect from="/all-courses" to ="/courses" />
             <Route render={() => <h1>No page found </h1>} />
           </Switch>
           <nav>
             <ul>
-              <li><NavLink to="/courses/" exact>Courses</NavLink></li>
+              <li><NavLink to="/courses" exact>Courses</NavLink></li>
               <li><NavLink to="/users">Users</NavLink></li>
             </ul>
           </nav>
